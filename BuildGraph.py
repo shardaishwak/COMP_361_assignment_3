@@ -17,6 +17,27 @@ class City(Enum):
     HO = "HO"
 
 
+class DistanceBuilder:
+    def __init__(self):
+        self.distance_map: dict[tuple[City, City], float] = {}
+
+    def generate_cities_key(self, city1: City, city2: City)-> tuple[City, City]:
+        return  (city1, city2) if city1.value < city2.value else (city2, city1)
+
+    def add_distance(self, city1: City, city2: City, distance: float):
+        if (city1 == city2):
+            raise Exception("city1 and city2 cannot be same cities.")
+        key = self.generate_cities_key(city1, city2)
+        self.distance_map[key] = distance
+
+    def get_distance(self, city1: City, city2: City)-> float:
+        return self.distance_map.get(self.generate_cities_key(city1, city2))
+
+
+distance_builder = DistanceBuilder()
+distance_builder.add_distance(City.VA, City.AB, 20)
+print(distance_builder.get_distance(City.VA, City.AB))
+
 
 adjacency_graph = {
     City.WV: {City.NV: 6.6, City.VA: 8.2},
