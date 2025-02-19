@@ -14,7 +14,7 @@ class City(Enum):
     AB = "AB",
     MI = "MI",
     CH = "CH",
-    HO = "HO"
+    HO = "HO",
 
 
 class DistanceBuilder:
@@ -141,7 +141,7 @@ adjacency_graph = {
     City.NV: {City.WV: 6.6, City.VA: 10.5},
     City.VA: {City.WV: 8.3, City.NV: 20.5, City.RI: 16.2, City.BU: 14.0},
     City.RI: {City.VA: 16.2, City.DE: 24.8, City.BU: 21.3, City.NW: 21.6},
-    City.BU: {City.VA: 14.0, City.RI: 21.3, City.NW: 7.4, City.SU: 13.9, City.MI: 54.9},
+    City.BU: {City.VA: 14.0, City.RI: 21.3, City.NW: 7.4, City.SU: 13.9, City.MI: 54.9, City.AB: 59.1},
     City.NW: {City.RI: 21.6, City.BU: 7.4, City.SU: 6.4},
     City.SU: {City.NW: 6.4, City.DE: 23.5, City.LA: 24.3, City.BU: 13.9},
     City.DE: {City.RI: 24.8, City.SU: 23.5, City.LA: 36.5},
@@ -171,4 +171,3 @@ def graph_to_tuple(graph: dict[City, dict[City, float]]) -> dict[City, list[tupl
 def naive_heuristics(city: City):
     pass
 
-print(graph_to_tuple(graph=adjacency_graph).get(City.BU))

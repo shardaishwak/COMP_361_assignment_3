@@ -100,9 +100,9 @@ class AStar:
     def run(self):
         self.openSet.push(self.start)
         while not self.openSet.empty():
-            algorithm.step()
+            self.step()
     
-    def reconstruct(self) -> list[Node]:
+    def reiterate(self) -> list[Node]:
         order = []
         node = self.goal
         while node is not None:
@@ -132,19 +132,19 @@ node4.set_neighbors((node2, 6), (node3, 10), (node4, 6))
 node5.set_neighbors((node2, 9), (node4, 6))
 
 # Just checking
-print(node0)
-print(node1)
-print(node2)
-print(node3)
-print(node4)
-print(node5)
+# print(node0)
+# print(node1)
+# print(node2)
+# print(node3)
+# print(node4)
+# print(node5)
         
 
 # Run the algorithm
-algorithm = AStar(node0, node5)
-algorithm.run()
+# algorithm = AStar(node0, node5)
+# algorithm.run()
 
-print(algorithm.reconstruct())
+# print(algorithm.reconstruct())
 
 # Traverse and find the route
 

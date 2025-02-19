@@ -103,31 +103,31 @@ node3.set_neighbors(node0, node2, node4)
 node4.set_neighbors(node2, node3, node4)
 node5.set_neighbors(node2, node4)
 
-# Just checking
-print(node0)
-print(node1)
-print(node2)
-print(node3)
-print(node4)
-print(node5)
+# # Just checking
+# print(node0)
+# print(node1)
+# print(node2)
+# print(node3)
+# print(node4)
+# print(node5)
 
 
 
-algorithm = GrassFire(node0, node5)
-algorithm.run()
-path = algorithm.reiterate()
+# algorithm = GrassFire(node0, node5)
+# algorithm.run()
+# path = algorithm.reiterate()
 
-print(node0)
-print(node1)
-print(node2)
-print(node3)
-print(node4)
-print(node5)
+# print(node0)
+# print(node1)
+# print(node2)
+# print(node3)
+# print(node4)
+# print(node5)
 
 
 
-for node in path:
-    print(node.id)
+# # for node in path:
+#     print(node.id)
 
 
 

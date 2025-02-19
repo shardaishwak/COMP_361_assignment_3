@@ -97,21 +97,21 @@ node4.set_neighbors((node2, 6), (node3, 10), (node4, 6))
 node5.set_neighbors((node2, 9), (node4, 6))
 
 # Just checking
-print(node0)
-print(node1)
-print(node2)
-print(node3)
-print(node4)
-print(node5)
+# print(node0)
+# print(node1)
+# print(node2)
+# print(node3)
+# print(node4)
+# print(node5)
 
 
 
-algorithm = Dikstra(node0)
-algorithm.run()
+# algorithm = Dikstra(node0)
+# algorithm.run()
 
-path = algorithm.reiterate(node2)
+# path = algorithm.reiterate(node2)
 
-for node in path:
-    print(node.id)
+# for node in path:
+#     print(node.id)
 
 
