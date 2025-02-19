@@ -1,4 +1,4 @@
-from BuildGraph import adjacency_graph, City
+from BC.BuildGraph import adjacency_graph, City
 from Dikstra import Dikstra, Node as DikstraNode
 
 # this can be switched to GrassFire node for grassfire algorithm
